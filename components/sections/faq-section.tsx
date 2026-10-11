@@ -12,8 +12,8 @@ export function FaqSection() {
         </h2>
       </div>
 
-      <div className="mt-10 grid gap-6 lg:grid-cols-12">
-        <div className="surface rounded-3xl p-2 sm:p-4 lg:col-span-8">
+      <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-12">
+        <div className="surface min-w-0 rounded-3xl p-2 sm:p-4 lg:col-span-8">
           <Accordion defaultExpandedKeys={["q0"]}>
             {faqs.map((f, i) => (
               <Accordion.Item key={f.q} id={`q${i}`}>
@@ -43,7 +43,7 @@ export function FaqSection() {
 
       <div className="mt-14">
         <h3 className="text-2xl font-semibold tracking-tight">Ce que cet espace peut permettre.</h3>
-        <div className="mt-6 grid gap-5 lg:grid-cols-12">
+        <div className="mt-6 grid grid-cols-1 gap-5 lg:grid-cols-12">
           <figure className="surface rounded-3xl p-7 lg:col-span-7">
             <blockquote className="text-xl font-medium leading-relaxed text-ink">{main}</blockquote>
           </figure>

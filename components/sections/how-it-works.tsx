@@ -14,7 +14,7 @@ export function HowItWorks() {
         <p className="mt-3 text-lg text-brown">Vous n’avez rien à préparer.</p>
       </div>
 
-      <div className="mt-10 grid gap-5 lg:grid-cols-12">
+      <div className="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-12">
         <Card className="surface rounded-3xl p-6 lg:col-span-7">
           <Card.Header>
             <Card.Title className="text-xl font-semibold">Première séance</Card.Title>
@@ -39,7 +39,7 @@ export function HowItWorks() {
           </Card.Content>
         </Card>
 
-        <div className="grid gap-5 lg:col-span-5">
+        <div className="grid min-w-0 gap-5 lg:col-span-5">
           <ul className="grid grid-cols-1 gap-3 sm:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3">
             {consultationFacts.map((f) => (
               <li key={f.title} className="surface group rounded-3xl p-4 transition duration-300 hover:-translate-y-1">

@@ -8,10 +8,10 @@ export function About() {
   return (
     <section id="qui-suis-je" aria-labelledby="approche-titre" className="reveal relative isolate mx-auto max-w-6xl px-5 py-12 lg:px-8 lg:py-20">
       <Decor tone="aqua" className="right-0 top-10 size-72" />
-      <div className="surface grid gap-8 p-6 sm:p-8 lg:grid-cols-12 lg:gap-12 lg:p-12">
+      <div className="surface grid grid-cols-1 gap-8 p-6 sm:p-8 lg:grid-cols-12 lg:gap-12 lg:p-12">
         <PortraitFrame className="aspect-[4/5] w-full max-w-sm justify-self-center lg:col-span-4 lg:max-w-none" />
 
-        <div className="lg:col-span-8">
+        <div className="min-w-0 lg:col-span-8">
           <p className="eyebrow">Qui suis-je ?</p>
           <h2 id="approche-titre" className="mt-3 text-[1.75rem] font-semibold leading-tight tracking-tight sm:text-4xl">
             Une thérapie qui s’adapte à vous, pas l’inverse.
@@ -27,10 +27,10 @@ export function About() {
 
           <div id="principes" className="mt-8">
             <Tabs defaultSelectedKey={principles[0].id}>
-              <Tabs.ListContainer>
+              <Tabs.ListContainer className="overflow-x-auto">
                 <Tabs.List aria-label="Mes principes d’accompagnement">
                   {principles.map((p, i) => (
-                    <Tabs.Tab key={p.id} id={p.id}>
+                    <Tabs.Tab key={p.id} id={p.id} className="shrink-0 whitespace-nowrap">
                       <span className="mr-1.5 text-xs text-brown">0{i + 1}</span>
                       {p.label}
                       <Tabs.Indicator />
