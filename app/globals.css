@@ -1,26 +1,135 @@
 @import "tailwindcss";
+@import "@heroui/styles";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --brand-teal: #52837c;
+  --brand-teal-deep: #3e6761;
+  --brand-aqua: #97cfc7;
+  --brand-brown: #835745;
+  --brand-rose: #cfa897;
+  --brand-ivory: #f7f5f1;
+  --brand-white: #ffffff;
+  --ink: #26332f;
+
+  /* Mapping des variables HeroUI sur la charte */
+  --background: var(--brand-ivory);
+  --foreground: var(--ink);
+  --surface: var(--brand-white);
+  --surface-foreground: var(--ink);
+  --overlay: var(--brand-white);
+  --overlay-foreground: var(--ink);
+  --accent: var(--brand-teal-deep);
+  --accent-foreground: var(--brand-white);
+  --muted: #5d6e69;
+  --border: rgb(82 131 124 / 0.18);
+  --separator: rgb(82 131 124 / 0.16);
+  --focus: var(--brand-teal);
+  --link: var(--brand-teal-deep);
+  --radius: 1.25rem;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-geist-sans), "Inter", system-ui, sans-serif;
+  --color-teal: var(--brand-teal);
+  --color-teal-deep: var(--brand-teal-deep);
+  --color-aqua: var(--brand-aqua);
+  --color-brown: var(--brand-brown);
+  --color-rose: var(--brand-rose);
+  --color-ivory: var(--brand-ivory);
+  --color-ink: var(--ink);
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-drift: drift 22s ease-in-out infinite;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--brand-ivory);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--brand-aqua);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 3px solid var(--brand-teal);
+  outline-offset: 3px;
+}
+
+@utility surface {
+  background: rgb(255 255 255 / 0.66);
+  border: 1px solid rgb(82 131 124 / 0.14);
+  border-radius: 1.75rem;
+  box-shadow: 0 1px 2px rgb(38 51 47 / 0.04), 0 8px 24px rgb(38 51 47 / 0.05);
+}
+
+@utility eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brand-brown);
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(24px, -18px, 0) scale(1.06);
+  }
+}
+
+@keyframes reveal-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .reveal {
+      animation: reveal-in 1ms linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 35%;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
