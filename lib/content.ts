@@ -1,7 +1,7 @@
 export const QARE_URL =
   "https://www.qare.fr/praticien/69fca90c4c4ffa002f7a3001?all=true&selectedSpeciality=psychologist&standardizedMotives=";
 export const RPPS = "10111858667";
-export const PORTRAIT_SRC: string | null = null;
+export const PORTRAIT_SRC: string | null = "/photo-doriane.jpg";
 
 export const nav = [
   { label: "Accueil", href: "#accueil" },

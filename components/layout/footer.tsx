@@ -11,11 +11,11 @@ export function Footer() {
         </div>
         <nav aria-label="Pied de page" className="flex flex-wrap gap-x-5 gap-y-2">
           {nav.map((item) => (
-            <a key={item.href} href={item.href} className="transition-colors hover:text-teal-deep">
+            <a key={item.href} href={item.href} className="transition-colors hover:text-brown">
               {item.label}
             </a>
           ))}
-          <a href={QARE_URL} target="_blank" rel="noreferrer" className="transition-colors hover:text-teal-deep">
+          <a href={QARE_URL} target="_blank" rel="noreferrer" className="transition-colors hover:text-brown">
             Rendez-vous via Qare
           </a>
         </nav>

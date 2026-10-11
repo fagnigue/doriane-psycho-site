@@ -7,7 +7,7 @@ export function FaqSection() {
     <section id="faq" aria-labelledby="faq-titre" className="reveal mx-auto max-w-6xl px-5 py-12 lg:px-8 lg:py-20">
       <div className="max-w-2xl">
         <p className="eyebrow">FAQ</p>
-        <h2 id="faq-titre" className="mt-3 text-[1.75rem] font-semibold leading-tight tracking-tight sm:text-4xl">
+        <h2 id="faq-titre" className="mt-3 text-[1.75rem] font-semibold leading-tight tracking-tight text-brown sm:text-4xl">
           Vos questions sur la thérapie en ligne
         </h2>
       </div>
@@ -31,7 +31,7 @@ export function FaqSection() {
           </Accordion>
         </div>
 
-        <aside aria-label="Cadre et confidentialité" className="rounded-3xl border border-teal/15 bg-aqua/20 p-6 lg:col-span-4">
+        <aside aria-label="Cadre et confidentialité" className="rounded-3xl border border-brown/15 bg-rose/25 p-6 lg:col-span-4">
           <p className="eyebrow">En confiance</p>
           <ul className="mt-4 space-y-3 text-sm text-ink/85">
             <li>Un cadre confidentiel et professionnel.</li>
@@ -42,10 +42,10 @@ export function FaqSection() {
       </div>
 
       <div className="mt-14">
-        <h3 className="text-2xl font-semibold tracking-tight">Ce que cet espace peut permettre.</h3>
+        <h3 className="text-2xl font-semibold tracking-tight">Quelques retours de mes patients.</h3>
         <div className="mt-6 grid grid-cols-1 gap-5 lg:grid-cols-12">
           <figure className="surface rounded-3xl p-7 lg:col-span-7">
-            <blockquote className="text-xl font-medium leading-relaxed text-ink">{main}</blockquote>
+            <blockquote className="text-xl font-medium leading-relaxed text-brown">{main}</blockquote>
           </figure>
           <div className="grid gap-5 lg:col-span-5">
             {others.map((q) => (

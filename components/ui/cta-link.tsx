@@ -2,9 +2,9 @@ import { QARE_URL } from "@/lib/content";
 import { ArrowIcon } from "./icons";
 
 const variants = {
-  primary: "button button--primary",
-  secondary: "button button--secondary",
-  light: "button bg-white text-teal-deep hover:bg-ivory",
+  primary: "button bg-brown text-white hover:bg-[#6b4637]",
+  secondary: "button border border-brown bg-transparent text-brown hover:bg-rose/30",
+  light: "button bg-white text-brown hover:bg-ivory",
 } as const;
 
 export function CtaLink({

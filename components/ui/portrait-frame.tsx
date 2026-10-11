@@ -14,7 +14,7 @@ export function PortraitFrame({ className = "" }: { className?: string }) {
           priority
         />
       ) : (
-        <div className="flex h-full min-h-72 flex-col items-center justify-center gap-2 bg-gradient-to-br from-aqua/40 to-rose/30 p-8 text-center">
+        <div className="flex h-full min-h-72 flex-col items-center justify-center gap-2 bg-linear-to-br from-aqua/40 to-rose/30 p-8 text-center">
           <span className="eyebrow">Portrait</span>
           <p className="text-lg font-medium text-ink">Photo de Doriane à ajouter</p>
         </div>

@@ -4,10 +4,17 @@ import { CtaLink } from "@/components/ui/cta-link";
 import { Decor } from "@/components/ui/decor";
 import { PortraitFrame } from "@/components/ui/portrait-frame";
 
+const floatingWords = [
+  { label: "Écouter", position: "-left-2 top-10 sm:-left-8" },
+  { label: "Comprendre", position: "-right-2 bottom-20 [animation-delay:-2.5s] sm:-right-8" },
+  { label: "Collaborer", position: "-left-2 top-2/3 [animation-delay:-5s] sm:-left-6" },
+  { label: "En visioconférence", position: "-right-2 top-20 [animation-delay:-3s] sm:-right-5" },
+] as const;
+
 export function Hero() {
   return (
     <section id="accueil" className="relative isolate mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-5 pb-16 pt-10 sm:pt-14 lg:grid-cols-12 lg:gap-12 lg:px-8 lg:pb-24 lg:pt-20">
-      <Decor tone="aqua" className="-right-24 top-0 size-80 sm:size-[26rem]" />
+      <Decor tone="aqua" className="-right-24 top-0 size-80 sm:size-104" />
       <Decor tone="rose" className="-left-20 bottom-0 size-64" />
 
       <div className="lg:col-span-7">
@@ -27,14 +34,13 @@ export function Hero() {
       </div>
 
       <div className="relative mx-auto w-full max-w-sm lg:col-span-5 lg:max-w-none">
-        <PortraitFrame className="aspect-[4/5] w-full" />
-        <Chip className="absolute -left-2 top-8 animate-float bg-white/85 shadow-md backdrop-blur sm:-left-6" variant="secondary">
-          <span aria-hidden="true" className="mr-1 inline-block size-2 rounded-full bg-teal" />
-          En visioconférence
-        </Chip>
-        <Chip className="absolute -right-2 bottom-10 animate-float bg-white/85 shadow-md backdrop-blur [animation-delay:-3s] sm:-right-5" variant="secondary">
-          45 min
-        </Chip>
+        <PortraitFrame className="aspect-4/5 w-full" />
+        {floatingWords.map((w) => (
+          <Chip key={w.label} className={`absolute animate-float bg-white/85 text-base font-semibold text-brown shadow-md backdrop-blur ${w.position}`} variant="secondary">
+            <span aria-hidden="true" className="mr-1 inline-block size-2 rounded-full bg-rose" />
+            {w.label}
+          </Chip>
+        ))}
       </div>
     </section>
   );

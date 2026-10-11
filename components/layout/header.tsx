@@ -14,8 +14,8 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-teal/15 bg-ivory/75 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-5 lg:px-8">
         <a href="#accueil" onClick={close} className="flex flex-col leading-tight">
-          <span className="text-base font-semibold text-ink">Doriane Zoko</span>
-          <span className="text-xs text-brown">Psychologue clinicienne</span>
+          <span className="text-base font-semibold text-brown">Doriane Zoko</span>
+          <span className="text-xs text-ink/70">Psychologue clinicienne</span>
         </a>
 
         <nav aria-label="Navigation principale" className="hidden items-center gap-1 lg:flex">
@@ -23,7 +23,7 @@ export function Header() {
             <a
               key={item.href}
               href={item.href}
-              className="rounded-full px-4 py-2 text-sm text-ink/80 transition-colors duration-200 hover:bg-teal/10 hover:text-teal-deep"
+              className="rounded-full px-4 py-2 text-sm text-ink/80 transition-colors duration-200 hover:bg-rose/30 hover:text-brown"
             >
               {item.label}
             </a>
@@ -34,8 +34,8 @@ export function Header() {
           <CtaLink className="hidden h-10 px-5 text-sm sm:inline-flex">Prendre rendez-vous</CtaLink>
           <Button
             isIconOnly
-            variant="secondary"
-            className="rounded-full lg:hidden"
+            variant="secondary" 
+            className="rounded-full text-brown lg:hidden"
             aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
             aria-expanded={open}
             aria-controls="menu-mobile"
@@ -55,7 +55,7 @@ export function Header() {
         <ul className="flex flex-col">
           {nav.map((item) => (
             <li key={item.href}>
-              <a href={item.href} onClick={close} className="block rounded-2xl px-4 py-3 text-base text-ink hover:bg-teal/10">
+              <a href={item.href} onClick={close} className="block rounded-2xl px-4 py-3 text-base text-ink hover:bg-rose/30">
                 {item.label}
               </a>
             </li>
