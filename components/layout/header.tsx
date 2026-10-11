@@ -14,9 +14,9 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-teal/15 bg-ivory/75 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-5 lg:px-8">
-        <a href="#accueil" onClick={close} className="flex items-center gap-2 leading-tight">
-          <Image src="/logo.jpg" alt="Logo Doriane Zoko" width={40} height={40} className="rounded-full" />
-          <div className="flex flex-col">
+        <a href="#accueil" onClick={close} className="flex min-w-0 items-center gap-2 leading-tight">
+          <Image src="/logo.jpg" alt="Logo Doriane Zoko" width={40} height={40} className="shrink-0 rounded-full" />
+          <div className="flex min-w-0 flex-col whitespace-nowrap">
             <span className="text-base font-semibold text-brown">Doriane Zoko</span>
             <span className="text-xs text-ink/70">Psychologue clinicienne</span>
           </div>
@@ -35,7 +35,9 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <CtaLink className="hidden h-10 px-5 text-sm sm:inline-flex">Prendre rendez-vous</CtaLink>
+          <div className="hidden sm:block">
+            <CtaLink className="h-10 px-5 text-sm">Prendre rendez-vous</CtaLink>
+          </div>
           <Button
             isIconOnly
             variant="secondary" 
