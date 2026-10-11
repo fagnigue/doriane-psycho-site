@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Button } from "@heroui/react";
 import { nav } from "@/lib/content";
 import { CtaLink } from "@/components/ui/cta-link";
@@ -13,9 +14,12 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-teal/15 bg-ivory/75 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-5 lg:px-8">
-        <a href="#accueil" onClick={close} className="flex flex-col leading-tight">
-          <span className="text-base font-semibold text-brown">Doriane Zoko</span>
-          <span className="text-xs text-ink/70">Psychologue clinicienne</span>
+        <a href="#accueil" onClick={close} className="flex items-center gap-2 leading-tight">
+          <Image src="/logo.jpg" alt="Logo Doriane Zoko" width={40} height={40} className="rounded-full" />
+          <div className="flex flex-col">
+            <span className="text-base font-semibold text-brown">Doriane Zoko</span>
+            <span className="text-xs text-ink/70">Psychologue clinicienne</span>
+          </div>
         </a>
 
         <nav aria-label="Navigation principale" className="hidden items-center gap-1 lg:flex">

@@ -13,7 +13,7 @@ const floatingWords = [
 
 export function Hero() {
   return (
-    <section id="accueil" className="relative isolate mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-5 pb-16 pt-10 sm:pt-14 lg:grid-cols-12 lg:gap-12 lg:px-8 lg:pb-24 lg:pt-20">
+    <section id="accueil" className="relative isolate mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-5 pb-11 pt-6 sm:pt-9 lg:grid-cols-12 lg:gap-12 lg:px-8 lg:pb-16 lg:pt-14">
       <Decor tone="aqua" className="-right-24 top-0 size-80 sm:size-104" />
       <Decor tone="rose" className="-left-20 bottom-0 size-64" />
 

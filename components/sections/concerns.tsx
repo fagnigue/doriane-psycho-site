@@ -6,7 +6,7 @@ const layout = ["md:col-span-7", "md:col-span-5 md:mt-12", "md:col-span-5", "md:
 
 export function Concerns() {
   return (
-    <section id="situations" aria-labelledby="situations-titre" className="reveal mx-auto max-w-6xl px-5 py-12 lg:px-8 lg:py-20">
+    <section id="situations" aria-labelledby="situations-titre" className="reveal mx-auto max-w-6xl px-5 py-8 lg:px-8 lg:py-14">
       <div className="max-w-2xl">
         <p className="eyebrow">Prendre le temps</p>
         <h2 id="situations-titre" className="mt-3 text-[1.75rem] font-semibold leading-tight tracking-tight text-brown sm:text-4xl">

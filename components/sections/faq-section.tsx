@@ -4,7 +4,7 @@ import { RPPS, faqs, testimonials } from "@/lib/content";
 export function FaqSection() {
   const [main, ...others] = testimonials;
   return (
-    <section id="faq" aria-labelledby="faq-titre" className="reveal mx-auto max-w-6xl px-5 py-12 lg:px-8 lg:py-20">
+    <section id="faq" aria-labelledby="faq-titre" className="reveal mx-auto max-w-6xl px-5 py-8 lg:px-8 lg:py-14">
       <div className="max-w-2xl">
         <p className="eyebrow">FAQ</p>
         <h2 id="faq-titre" className="mt-3 text-[1.75rem] font-semibold leading-tight tracking-tight text-brown sm:text-4xl">

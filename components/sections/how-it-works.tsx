@@ -6,7 +6,7 @@ import { FactIcon } from "@/components/ui/icons";
 
 export function HowItWorks() {
   return (
-    <section id="cadre-tarif" aria-labelledby="seance-titre" className="reveal mx-auto max-w-6xl px-5 py-12 lg:px-8 lg:py-20">
+    <section id="cadre-tarif" aria-labelledby="seance-titre" className="reveal mx-auto max-w-6xl px-5 py-8 lg:px-8 lg:py-14">
       <div className="max-w-2xl">
         <p className="eyebrow">Cadre et tarif</p>
         <h2 id="seance-titre" className="mt-3 text-[1.75rem] font-semibold leading-tight tracking-tight text-brown sm:text-4xl">

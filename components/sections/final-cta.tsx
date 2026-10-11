@@ -3,7 +3,7 @@ import { Footer } from "@/components/layout/footer";
 
 export function FinalCta() {
   return (
-    <section aria-labelledby="cta-titre" className="mx-auto max-w-6xl px-5 pb-6 pt-12 lg:px-8 lg:pt-20">
+    <section aria-labelledby="cta-titre" className="mx-auto max-w-6xl px-5 pb-4 pt-8 lg:px-8 lg:pt-14">
       <div className="reveal relative isolate overflow-hidden rounded-[2rem] bg-teal-deep px-6 py-12 text-center text-white sm:px-12 sm:py-16">
         <div aria-hidden="true" className="absolute -right-16 -top-16 -z-10 size-64 animate-drift rounded-full bg-aqua/25 blur-3xl" />
         <div aria-hidden="true" className="absolute -bottom-20 -left-10 -z-10 size-64 animate-drift rounded-full bg-rose/25 blur-3xl [animation-delay:-8s]" />
